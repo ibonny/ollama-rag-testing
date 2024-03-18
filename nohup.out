@@ -17,3 +17,250 @@ time=2024-03-18T16:38:24.019Z level=INFO source=download.go:136 msg="downloading
 time=2024-03-18T16:38:26.955Z level=INFO source=download.go:136 msg="downloading fa304d675061 in 1 91 B part(s)"
 time=2024-03-18T16:38:29.039Z level=INFO source=download.go:136 msg="downloading 42ba7f8a01dd in 1 557 B part(s)"
 [GIN] 2024/03/18 - 16:38:34 | 200 |         1m54s |       127.0.0.1 | POST     "/api/pull"
+Couldn't find '/home/gitpod/.ollama/id_ed25519'. Generating new private key.
+Your new public key is: 
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOrMZwCIOhwRiuV2pmghweNcUWmW7sYyABxVFqWGFB9c
+
+time=2024-03-18T17:04:45.827Z level=INFO source=images.go:806 msg="total blobs: 0"
+time=2024-03-18T17:04:45.827Z level=INFO source=images.go:813 msg="total unused blobs removed: 0"
+time=2024-03-18T17:04:45.827Z level=INFO source=routes.go:1110 msg="Listening on 127.0.0.1:11434 (version 0.1.29)"
+time=2024-03-18T17:04:45.827Z level=INFO source=payload_common.go:112 msg="Extracting dynamic libraries to /tmp/ollama1132553863/runners ..."
+time=2024-03-18T17:04:48.517Z level=INFO source=payload_common.go:139 msg="Dynamic LLM libraries [cpu cuda_v11 rocm_v60000 cpu_avx cpu_avx2]"
+time=2024-03-18T17:04:48.517Z level=INFO source=gpu.go:77 msg="Detecting GPU type"
+time=2024-03-18T17:04:48.517Z level=INFO source=gpu.go:191 msg="Searching for GPU management library libnvidia-ml.so"
+time=2024-03-18T17:04:48.519Z level=INFO source=gpu.go:237 msg="Discovered GPU libraries: []"
+time=2024-03-18T17:04:48.519Z level=INFO source=cpu_common.go:11 msg="CPU has AVX2"
+time=2024-03-18T17:04:48.519Z level=INFO source=routes.go:1133 msg="no GPU detected"
+[GIN] 2024/03/18 - 17:05:15 | 404 |     1.33496ms |       127.0.0.1 | POST     "/api/embeddings"
+[GIN] 2024/03/18 - 17:05:38 | 200 |        34.5µs |       127.0.0.1 | HEAD     "/"
+time=2024-03-18T17:05:41.462Z level=INFO source=download.go:136 msg="downloading 970aa74c0a90 in 3 100 MB part(s)"
+time=2024-03-18T17:05:45.736Z level=INFO source=download.go:136 msg="downloading c71d239df917 in 1 11 KB part(s)"
+time=2024-03-18T17:05:48.788Z level=INFO source=download.go:136 msg="downloading ce4a164fc046 in 1 17 B part(s)"
+time=2024-03-18T17:05:51.948Z level=INFO source=download.go:136 msg="downloading 31df23ea7daa in 1 420 B part(s)"
+[GIN] 2024/03/18 - 17:05:54 | 200 | 15.320867628s |       127.0.0.1 | POST     "/api/pull"
+time=2024-03-18T17:07:05.959Z level=WARN source=llm.go:44 msg="requested context length is greater than model's max context length (8192 > 2048), using 2048 instead"
+time=2024-03-18T17:07:05.959Z level=INFO source=cpu_common.go:11 msg="CPU has AVX2"
+time=2024-03-18T17:07:05.959Z level=INFO source=cpu_common.go:11 msg="CPU has AVX2"
+time=2024-03-18T17:07:05.959Z level=INFO source=llm.go:85 msg="GPU not available, falling back to CPU"
+time=2024-03-18T17:07:05.961Z level=INFO source=dyn_ext_server.go:90 msg="Loading Dynamic llm server: /tmp/ollama1132553863/runners/cpu_avx2/libext_server.so"
+time=2024-03-18T17:07:05.961Z level=INFO source=dyn_ext_server.go:150 msg="Initializing llama server"
+llama_model_loader: loaded meta data with 24 key-value pairs and 112 tensors from /home/gitpod/.ollama/models/blobs/sha256:970aa74c0a90ef7482477cf803618e776e173c007bf957f635f1015bfcfef0e6 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = nomic-bert
+llama_model_loader: - kv   1:                               general.name str              = nomic-embed-text-v1.5
+llama_model_loader: - kv   2:                     nomic-bert.block_count u32              = 12
+llama_model_loader: - kv   3:                  nomic-bert.context_length u32              = 2048
+llama_model_loader: - kv   4:                nomic-bert.embedding_length u32              = 768
+llama_model_loader: - kv   5:             nomic-bert.feed_forward_length u32              = 3072
+llama_model_loader: - kv   6:            nomic-bert.attention.head_count u32              = 12
+llama_model_loader: - kv   7:    nomic-bert.attention.layer_norm_epsilon f32              = 0.000000
+llama_model_loader: - kv   8:                          general.file_type u32              = 1
+llama_model_loader: - kv   9:                nomic-bert.attention.causal bool             = false
+llama_model_loader: - kv  10:                    nomic-bert.pooling_type u32              = 1
+llama_model_loader: - kv  11:                  nomic-bert.rope.freq_base f32              = 1000.000000
+llama_model_loader: - kv  12:            tokenizer.ggml.token_type_count u32              = 2
+llama_model_loader: - kv  13:                tokenizer.ggml.bos_token_id u32              = 101
+llama_model_loader: - kv  14:                tokenizer.ggml.eos_token_id u32              = 102
+llama_model_loader: - kv  15:                       tokenizer.ggml.model str              = bert
+llama_model_loader: - kv  16:                      tokenizer.ggml.tokens arr[str,30522]   = ["[PAD]", "[unused0]", "[unused1]", "...
+llama_model_loader: - kv  17:                      tokenizer.ggml.scores arr[f32,30522]   = [-1000.000000, -1000.000000, -1000.00...
+llama_model_loader: - kv  18:                  tokenizer.ggml.token_type arr[i32,30522]   = [3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+llama_model_loader: - kv  19:            tokenizer.ggml.unknown_token_id u32              = 100
+llama_model_loader: - kv  20:          tokenizer.ggml.seperator_token_id u32              = 102
+llama_model_loader: - kv  21:            tokenizer.ggml.padding_token_id u32              = 0
+llama_model_loader: - kv  22:                tokenizer.ggml.cls_token_id u32              = 101
+llama_model_loader: - kv  23:               tokenizer.ggml.mask_token_id u32              = 103
+llama_model_loader: - type  f32:   51 tensors
+llama_model_loader: - type  f16:   61 tensors
+llm_load_vocab: mismatch in special tokens definition ( 7104/30522 vs 5/30522 ).
+llm_load_print_meta: format           = GGUF V3 (latest)
+llm_load_print_meta: arch             = nomic-bert
+llm_load_print_meta: vocab type       = WPM
+llm_load_print_meta: n_vocab          = 30522
+llm_load_print_meta: n_merges         = 0
+llm_load_print_meta: n_ctx_train      = 2048
+llm_load_print_meta: n_embd           = 768
+llm_load_print_meta: n_head           = 12
+llm_load_print_meta: n_head_kv        = 12
+llm_load_print_meta: n_layer          = 12
+llm_load_print_meta: n_rot            = 64
+llm_load_print_meta: n_embd_head_k    = 64
+llm_load_print_meta: n_embd_head_v    = 64
+llm_load_print_meta: n_gqa            = 1
+llm_load_print_meta: n_embd_k_gqa     = 768
+llm_load_print_meta: n_embd_v_gqa     = 768
+llm_load_print_meta: f_norm_eps       = 1.0e-12
+llm_load_print_meta: f_norm_rms_eps   = 0.0e+00
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: n_ff             = 3072
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: pooling type     = 1
+llm_load_print_meta: rope type        = 2
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 1000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_yarn_orig_ctx  = 2048
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: model type       = 137M
+llm_load_print_meta: model ftype      = F16
+llm_load_print_meta: model params     = 136.73 M
+llm_load_print_meta: model size       = 260.86 MiB (16.00 BPW) 
+llm_load_print_meta: general.name     = nomic-embed-text-v1.5
+llm_load_print_meta: BOS token        = 101 '[CLS]'
+llm_load_print_meta: EOS token        = 102 '[SEP]'
+llm_load_print_meta: UNK token        = 100 '[UNK]'
+llm_load_print_meta: SEP token        = 102 '[SEP]'
+llm_load_print_meta: PAD token        = 0 '[PAD]'
+llm_load_tensors: ggml ctx size =    0.04 MiB
+llm_load_tensors:        CPU buffer size =   260.86 MiB
+.......................................................
+llama_new_context_with_model: n_ctx      = 2048
+llama_new_context_with_model: freq_base  = 1000.0
+llama_new_context_with_model: freq_scale = 1
+llama_kv_cache_init:        CPU KV buffer size =    72.00 MiB
+llama_new_context_with_model: KV self size  =   72.00 MiB, K (f16):   36.00 MiB, V (f16):   36.00 MiB
+llama_new_context_with_model:        CPU input buffer size   =     6.52 MiB
+llama_new_context_with_model:        CPU compute buffer size =    22.00 MiB
+llama_new_context_with_model: graph splits (measure): 1
+loading library /tmp/ollama1132553863/runners/cpu_avx2/libext_server.so
+{"function":"initialize","level":"INFO","line":440,"msg":"initializing slots","n_slots":1,"tid":"140555824657984","timestamp":1710781626}
+{"function":"initialize","level":"INFO","line":449,"msg":"new slot","n_ctx_slot":2048,"slot_id":0,"tid":"140555824657984","timestamp":1710781626}
+time=2024-03-18T17:07:06.102Z level=INFO source=dyn_ext_server.go:162 msg="Starting llama main loop"
+{"function":"update_slots","level":"INFO","line":1590,"msg":"all slots are idle and system prompt is empty, clear the KV cache","tid":"140555102705216","timestamp":1710781626}
+{"function":"launch_slot_with_data","level":"INFO","line":830,"msg":"slot is processing task","slot_id":0,"task_id":0,"tid":"140555102705216","timestamp":1710781626}
+{"function":"update_slots","level":"INFO","line":1848,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":0,"tid":"140555102705216","timestamp":1710781626}
+{"function":"update_slots","level":"INFO","line":1652,"msg":"slot released","n_cache_tokens":1892,"n_ctx":2048,"n_past":1892,"n_system_tokens":0,"slot_id":0,"task_id":0,"tid":"140555102705216","timestamp":1710781634,"truncated":true}
+[GIN] 2024/03/18 - 17:07:14 | 200 |   8.62810802s |       127.0.0.1 | POST     "/api/embeddings"
+{"function":"launch_slot_with_data","level":"INFO","line":830,"msg":"slot is processing task","slot_id":0,"task_id":3,"tid":"140555102705216","timestamp":1710781634}
+{"function":"update_slots","level":"INFO","line":1848,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":3,"tid":"140555102705216","timestamp":1710781634}
+{"function":"update_slots","level":"INFO","line":1652,"msg":"slot released","n_cache_tokens":391,"n_ctx":2048,"n_past":391,"n_system_tokens":0,"slot_id":0,"task_id":3,"tid":"140555102705216","timestamp":1710781635,"truncated":false}
+[GIN] 2024/03/18 - 17:07:15 | 200 |  1.480963158s |       127.0.0.1 | POST     "/api/embeddings"
+{"function":"launch_slot_with_data","level":"INFO","line":830,"msg":"slot is processing task","slot_id":0,"task_id":6,"tid":"140555102705216","timestamp":1710781635}
+{"function":"update_slots","level":"INFO","line":1848,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":6,"tid":"140555102705216","timestamp":1710781635}
+{"function":"update_slots","level":"INFO","line":1652,"msg":"slot released","n_cache_tokens":11,"n_ctx":2048,"n_past":11,"n_system_tokens":0,"slot_id":0,"task_id":6,"tid":"140555102705216","timestamp":1710781636,"truncated":false}
+[GIN] 2024/03/18 - 17:07:16 | 200 |   17.690788ms |       127.0.0.1 | POST     "/api/embeddings"
+[GIN] 2024/03/18 - 17:07:16 | 404 |      432.17µs |       127.0.0.1 | POST     "/api/generate"
+[GIN] 2024/03/18 - 17:07:27 | 200 |       24.57µs |       127.0.0.1 | HEAD     "/"
+time=2024-03-18T17:07:29.639Z level=INFO source=download.go:136 msg="downloading e8a35b5937a5 in 42 100 MB part(s)"
+time=2024-03-18T17:08:46.508Z level=INFO source=download.go:178 msg="e8a35b5937a5 part 14 attempt 0 failed: unexpected EOF, retrying in 1s"
+time=2024-03-18T17:09:12.761Z level=INFO source=download.go:136 msg="downloading 43070e2d4e53 in 1 11 KB part(s)"
+time=2024-03-18T17:09:16.096Z level=INFO source=download.go:136 msg="downloading e6836092461f in 1 42 B part(s)"
+time=2024-03-18T17:09:18.077Z level=INFO source=download.go:136 msg="downloading ed11eda7790d in 1 30 B part(s)"
+time=2024-03-18T17:09:21.074Z level=INFO source=download.go:136 msg="downloading f9b1e3196ecf in 1 483 B part(s)"
+[GIN] 2024/03/18 - 17:09:26 | 200 |         1m58s |       127.0.0.1 | POST     "/api/pull"
+[GIN] 2024/03/18 - 17:10:02 | 200 |      25.149µs |       127.0.0.1 | HEAD     "/"
+[GIN] 2024/03/18 - 17:10:02 | 200 |       538.5µs |       127.0.0.1 | GET      "/api/tags"
+{"function":"launch_slot_with_data","level":"INFO","line":830,"msg":"slot is processing task","slot_id":0,"task_id":9,"tid":"140555102705216","timestamp":1710781833}
+{"function":"update_slots","level":"INFO","line":1848,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":9,"tid":"140555102705216","timestamp":1710781833}
+{"function":"update_slots","level":"INFO","line":1652,"msg":"slot released","n_cache_tokens":1962,"n_ctx":2048,"n_past":1962,"n_system_tokens":0,"slot_id":0,"task_id":9,"tid":"140555102705216","timestamp":1710781840,"truncated":true}
+[GIN] 2024/03/18 - 17:10:40 | 200 |  6.840219589s |       127.0.0.1 | POST     "/api/embeddings"
+{"function":"launch_slot_with_data","level":"INFO","line":830,"msg":"slot is processing task","slot_id":0,"task_id":12,"tid":"140555102705216","timestamp":1710781840}
+{"function":"update_slots","level":"INFO","line":1848,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":12,"tid":"140555102705216","timestamp":1710781840}
+{"function":"update_slots","level":"INFO","line":1652,"msg":"slot released","n_cache_tokens":386,"n_ctx":2048,"n_past":386,"n_system_tokens":0,"slot_id":0,"task_id":12,"tid":"140555102705216","timestamp":1710781841,"truncated":false}
+[GIN] 2024/03/18 - 17:10:41 | 200 |  1.301066581s |       127.0.0.1 | POST     "/api/embeddings"
+{"function":"launch_slot_with_data","level":"INFO","line":830,"msg":"slot is processing task","slot_id":0,"task_id":15,"tid":"140555102705216","timestamp":1710781841}
+{"function":"update_slots","level":"INFO","line":1848,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":15,"tid":"140555102705216","timestamp":1710781841}
+{"function":"update_slots","level":"INFO","line":1652,"msg":"slot released","n_cache_tokens":11,"n_ctx":2048,"n_past":11,"n_system_tokens":0,"slot_id":0,"task_id":15,"tid":"140555102705216","timestamp":1710781841,"truncated":false}
+[GIN] 2024/03/18 - 17:10:41 | 200 |   21.859937ms |       127.0.0.1 | POST     "/api/embeddings"
+time=2024-03-18T17:10:41.707Z level=INFO source=routes.go:79 msg="changing loaded model"
+time=2024-03-18T17:10:42.029Z level=INFO source=cpu_common.go:11 msg="CPU has AVX2"
+time=2024-03-18T17:10:42.029Z level=INFO source=cpu_common.go:11 msg="CPU has AVX2"
+time=2024-03-18T17:10:42.029Z level=INFO source=llm.go:85 msg="GPU not available, falling back to CPU"
+time=2024-03-18T17:10:42.029Z level=INFO source=dyn_ext_server.go:90 msg="Loading Dynamic llm server: /tmp/ollama1132553863/runners/cpu_avx2/libext_server.so"
+time=2024-03-18T17:10:42.029Z level=INFO source=dyn_ext_server.go:150 msg="Initializing llama server"
+llama_model_loader: loaded meta data with 24 key-value pairs and 291 tensors from /home/gitpod/.ollama/models/blobs/sha256:e8a35b5937a5e6d5c35d1f2a15f161e07eefe5e5bb0a3cdd42998ee79b057730 (version GGUF V3 (latest))
+llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+llama_model_loader: - kv   0:                       general.architecture str              = llama
+llama_model_loader: - kv   1:                               general.name str              = mistralai
+llama_model_loader: - kv   2:                       llama.context_length u32              = 32768
+llama_model_loader: - kv   3:                     llama.embedding_length u32              = 4096
+llama_model_loader: - kv   4:                          llama.block_count u32              = 32
+llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 14336
+llama_model_loader: - kv   6:                 llama.rope.dimension_count u32              = 128
+llama_model_loader: - kv   7:                 llama.attention.head_count u32              = 32
+llama_model_loader: - kv   8:              llama.attention.head_count_kv u32              = 8
+llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+llama_model_loader: - kv  10:                       llama.rope.freq_base f32              = 1000000.000000
+llama_model_loader: - kv  11:                          general.file_type u32              = 2
+llama_model_loader: - kv  12:                       tokenizer.ggml.model str              = llama
+llama_model_loader: - kv  13:                      tokenizer.ggml.tokens arr[str,32000]   = ["<unk>", "<s>", "</s>", "<0x00>", "<...
+llama_model_loader: - kv  14:                      tokenizer.ggml.scores arr[f32,32000]   = [0.000000, 0.000000, 0.000000, 0.0000...
+llama_model_loader: - kv  15:                  tokenizer.ggml.token_type arr[i32,32000]   = [2, 3, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, ...
+llama_model_loader: - kv  16:                      tokenizer.ggml.merges arr[str,58980]   = ["▁ t", "i n", "e r", "▁ a", "h e...
+llama_model_loader: - kv  17:                tokenizer.ggml.bos_token_id u32              = 1
+llama_model_loader: - kv  18:                tokenizer.ggml.eos_token_id u32              = 2
+llama_model_loader: - kv  19:            tokenizer.ggml.unknown_token_id u32              = 0
+llama_model_loader: - kv  20:               tokenizer.ggml.add_bos_token bool             = true
+llama_model_loader: - kv  21:               tokenizer.ggml.add_eos_token bool             = false
+llama_model_loader: - kv  22:                    tokenizer.chat_template str              = {{ bos_token }}{% for message in mess...
+llama_model_loader: - kv  23:               general.quantization_version u32              = 2
+llama_model_loader: - type  f32:   65 tensors
+llama_model_loader: - type q4_0:  225 tensors
+llama_model_loader: - type q6_K:    1 tensors
+llm_load_vocab: special tokens definition check successful ( 259/32000 ).
+llm_load_print_meta: format           = GGUF V3 (latest)
+llm_load_print_meta: arch             = llama
+llm_load_print_meta: vocab type       = SPM
+llm_load_print_meta: n_vocab          = 32000
+llm_load_print_meta: n_merges         = 0
+llm_load_print_meta: n_ctx_train      = 32768
+llm_load_print_meta: n_embd           = 4096
+llm_load_print_meta: n_head           = 32
+llm_load_print_meta: n_head_kv        = 8
+llm_load_print_meta: n_layer          = 32
+llm_load_print_meta: n_rot            = 128
+llm_load_print_meta: n_embd_head_k    = 128
+llm_load_print_meta: n_embd_head_v    = 128
+llm_load_print_meta: n_gqa            = 4
+llm_load_print_meta: n_embd_k_gqa     = 1024
+llm_load_print_meta: n_embd_v_gqa     = 1024
+llm_load_print_meta: f_norm_eps       = 0.0e+00
+llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+llm_load_print_meta: n_ff             = 14336
+llm_load_print_meta: n_expert         = 0
+llm_load_print_meta: n_expert_used    = 0
+llm_load_print_meta: pooling type     = 0
+llm_load_print_meta: rope type        = 0
+llm_load_print_meta: rope scaling     = linear
+llm_load_print_meta: freq_base_train  = 1000000.0
+llm_load_print_meta: freq_scale_train = 1
+llm_load_print_meta: n_yarn_orig_ctx  = 32768
+llm_load_print_meta: rope_finetuned   = unknown
+llm_load_print_meta: model type       = 7B
+llm_load_print_meta: model ftype      = Q4_0
+llm_load_print_meta: model params     = 7.24 B
+llm_load_print_meta: model size       = 3.83 GiB (4.54 BPW) 
+llm_load_print_meta: general.name     = mistralai
+llm_load_print_meta: BOS token        = 1 '<s>'
+llm_load_print_meta: EOS token        = 2 '</s>'
+llm_load_print_meta: UNK token        = 0 '<unk>'
+llm_load_print_meta: LF token         = 13 '<0x0A>'
+llm_load_tensors: ggml ctx size =    0.11 MiB
+llm_load_tensors:        CPU buffer size =  3917.87 MiB
+..................................................................................................
+llama_new_context_with_model: n_ctx      = 2048
+llama_new_context_with_model: freq_base  = 1000000.0
+llama_new_context_with_model: freq_scale = 1
+llama_kv_cache_init:        CPU KV buffer size =   256.00 MiB
+llama_new_context_with_model: KV self size  =  256.00 MiB, K (f16):  128.00 MiB, V (f16):  128.00 MiB
+llama_new_context_with_model:        CPU input buffer size   =    13.02 MiB
+llama_new_context_with_model:        CPU compute buffer size =   160.00 MiB
+llama_new_context_with_model: graph splits (measure): 1
+loading library /tmp/ollama1132553863/runners/cpu_avx2/libext_server.so
+{"function":"initialize","level":"INFO","line":440,"msg":"initializing slots","n_slots":1,"tid":"140554843170368","timestamp":1710781842}
+{"function":"initialize","level":"INFO","line":449,"msg":"new slot","n_ctx_slot":2048,"slot_id":0,"tid":"140554843170368","timestamp":1710781842}
+time=2024-03-18T17:10:42.912Z level=INFO source=dyn_ext_server.go:162 msg="Starting llama main loop"
+{"function":"update_slots","level":"INFO","line":1590,"msg":"all slots are idle and system prompt is empty, clear the KV cache","tid":"140555782694464","timestamp":1710781842}
+{"function":"launch_slot_with_data","level":"INFO","line":830,"msg":"slot is processing task","slot_id":0,"task_id":0,"tid":"140555782694464","timestamp":1710781842}
+{"function":"update_slots","ga_i":0,"level":"INFO","line":1821,"msg":"slot progression","n_past":0,"n_past_se":0,"n_prompt_tokens_processed":1856,"slot_id":0,"task_id":0,"tid":"140555782694464","timestamp":1710781842}
+{"function":"update_slots","level":"INFO","line":1848,"msg":"kv cache rm [p0, end)","p0":0,"slot_id":0,"task_id":0,"tid":"140555782694464","timestamp":1710781842}
+{"function":"print_timings","level":"INFO","line":257,"msg":"prompt eval time     =  379096.26 ms /  1856 tokens (  204.25 ms per token,     4.90 tokens per second)","n_prompt_tokens_processed":1856,"n_tokens_second":4.895854104222985,"slot_id":0,"t_prompt_processing":379096.264,"t_token":204.25445258620692,"task_id":0,"tid":"140555782694464","timestamp":1710782249}
+{"function":"print_timings","level":"INFO","line":271,"msg":"generation eval time =   27601.37 ms /    83 runs   (  332.55 ms per token,     3.01 tokens per second)","n_decoded":83,"n_tokens_second":3.007097547273566,"slot_id":0,"t_token":332.546578313253,"t_token_generation":27601.366,"task_id":0,"tid":"140555782694464","timestamp":1710782249}
+{"function":"print_timings","level":"INFO","line":281,"msg":"          total time =  406697.63 ms","slot_id":0,"t_prompt_processing":379096.264,"t_token_generation":27601.366,"t_total":406697.63,"task_id":0,"tid":"140555782694464","timestamp":1710782249}
+{"function":"update_slots","level":"INFO","line":1652,"msg":"slot released","n_cache_tokens":1939,"n_ctx":2048,"n_past":1938,"n_system_tokens":0,"slot_id":0,"task_id":0,"tid":"140555782694464","timestamp":1710782249,"truncated":true}
+[GIN] 2024/03/18 - 17:17:29 | 200 |         6m47s |       127.0.0.1 | POST     "/api/generate"
